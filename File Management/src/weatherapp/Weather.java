@@ -2,13 +2,13 @@ package jdbcapp.weatherapp;
 
 public class Weather {
     private int id;
-    private String description;
     private String main;
+    private String description;
 
-    public Weather(int id, String description, String main) {
+    public Weather(int id, String main, String description) {
         this.id = id;
-        this.description = description;
         this.main = main;
+        this.description = description;
     }
 
     public int getId() {
@@ -19,14 +19,6 @@ public class Weather {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getMain() {
         return main;
     }
@@ -35,9 +27,17 @@ public class Weather {
         this.main = main;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
-        return "Weather:"+ "\nid: " +id + "\ndescription: "+description +"\nmain:" +main;
+        return "Weather:"+ "\nid: " +id  +"\nmain:" +main+ "\ndescription: "+description;
 
     }
 }
